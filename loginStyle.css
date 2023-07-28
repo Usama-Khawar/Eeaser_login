@@ -27,6 +27,8 @@ body {
     border-radius: 20px;
     box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.15);
     padding: 20px;
+    max-width: 510px;
+    width: 100%;
 }
 
 img {
@@ -50,8 +52,9 @@ form {
     grid-template-columns: 1fr;
     gap: 10px;
     text-align: right;
-    width: 100%;
-    margin-top: 10px;
+    width: 85%;
+    margin-top: 20px;
+    position: relative;
 }
 
 input {
@@ -61,7 +64,28 @@ input {
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.02) inset;
     height: 40px;
     /* Adjusted height for smaller screens */
-    padding: 0 10px;
+    padding: 0 12px;
+}
+
+input[type="password"] {
+    padding-right: 35px;
+}
+
+
+
+i {
+    position: absolute;
+    opacity: 0.2;
+    top: 65px;
+    right: 10px;
+
+}
+
+input::placeholder {
+    color: black;
+    /*Change the placeholder color*/
+    opacity: 0.2;
+    /*Change the opacity between 0 and 1*/
 }
 
 
@@ -101,34 +125,19 @@ footer h5 {
 }
 
 /* Media Queries for Responsive Design */
-@media screen and (min-width: 480px) {
-    .box {
-        width: 60%;
-    }
-}
+
 
 @media screen and (max-width: 480px) {
 
-    .box {
-        width: 80%;
-        margin-top: 20px;
-    }
 
-    img {
-        margin-top: 20px;
-        width: 148px;
-        height: auto;
-    }
+
+
 
     h3 {
-        font-size: 12px;
+        font-size: 18px;
         margin-top: 15px;
     }
 
-    form {
-        width: 90%;
-        margin-top: 60px;
-    }
 
     input {
         padding: 0 8px;
@@ -137,12 +146,18 @@ footer h5 {
         /* Adjusted height for smaller screens */
     }
 
+    i {
+        font-size: 12px;
+        top: 60px;
+        right: 10px;
+    }
+
     h4 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .btn {
-        font-size: 16px;
+        font-size: 12px;
         margin-top: 2px;
     }
 }
