@@ -3,16 +3,20 @@
     padding: 0;
 }
 
-.container {
-    background-color: #D1F1FA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+html,
+body {
+    height: 100%;
 }
 
-
+.container {
+    background-color: #D1F1FA;
+    /* display: grid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
 
 .box {
     display: flex;
@@ -22,15 +26,14 @@
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.15);
-
+    padding: 20px;
 }
 
 img {
-
     margin-top: 40px;
+    width: 248px;
+    height: auto;
 }
-
-
 
 h3 {
     color: #08253F;
@@ -39,43 +42,37 @@ h3 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
     text-align: right;
-    width: 80%;
-    position: relative;
+    width: 100%;
+    margin-top: 10px;
 }
 
 input {
-    margin-top: 21px;
     border-radius: 9px;
     border: 1px solid #DEDEDE;
     background: #F6F6F6;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.02) inset;
-    height: 50px;
-    padding-left: 10px;
-    padding-right: 10%;
+    height: 40px;
+    /* Adjusted height for smaller screens */
+    padding: 0 10px;
 }
 
-i {
-    position: absolute;
-    right: 15px;
-    top: 113px;
-}
 
 h4 {
-
-    margin-top: 4px;
     color: #0D3A63;
     font-family: Nunito Sans;
     font-size: 17px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top: 4px;
 }
 
 .btn {
@@ -83,9 +80,10 @@ h4 {
     padding: 10px 0;
     color: white;
     border-radius: 6px;
-    margin: 41px auto;
+    margin-top: 20px;
     background-color: #0D3A63;
     font-weight: bolder;
+    place-self: center;
 }
 
 footer {
@@ -100,115 +98,51 @@ footer h5 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-    width: 90%;
-
-}
-
-@media only screen and (min-width: 600px) {
-
-    /* For tablets: */
-    .col-s-1 {
-        width: 8.33%;
-    }
-
-    .col-s-2 {
-        width: 16.66%;
-    }
-
-    .col-s-3 {
-        width: 25%;
-    }
-
-    .col-s-4 {
-        width: 33.33%;
-    }
-
-    .col-s-5 {
-        width: 41.66%;
-    }
-
-    .col-s-6 {
-        width: 50%;
-    }
-
-    .col-s-7 {
-        width: 58.33%;
-    }
-
-    .col-s-8 {
-        width: 66.66%;
-    }
-
-    .col-s-9 {
-        width: 75%;
-    }
-
-    .col-s-10 {
-        width: 83.33%;
-    }
-
-    .col-s-11 {
-        width: 91.66%;
-    }
-
-    .col-s-12 {
-        width: 100%;
+/* Media Queries for Responsive Design */
+@media screen and (min-width: 480px) {
+    .box {
+        width: 60%;
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 480px) {
 
-    /* For desktop: */
-    .col-1 {
-        width: 8.33%;
+    .box {
+        width: 80%;
+        margin-top: 20px;
     }
 
-    .col-2 {
-        width: 16.66%;
+    img {
+        margin-top: 20px;
+        width: 148px;
+        height: auto;
     }
 
-    .col-3 {
-        width: 25%;
+    h3 {
+        font-size: 12px;
+        margin-top: 15px;
     }
 
-    .col-4 {
-        width: 33.33%;
+    form {
+        width: 90%;
+        margin-top: 60px;
     }
 
-    .col-5 {
-        width: 41.66%;
+    input {
+        padding: 0 8px;
+        font-size: 14px;
+        height: 36px;
+        /* Adjusted height for smaller screens */
     }
 
-    .col-6 {
-        width: 50%;
+    h4 {
+        font-size: 16px;
     }
 
-    .col-7 {
-        width: 58.33%;
-    }
-
-    .col-8 {
-        width: 66.66%;
-    }
-
-    .col-9 {
-        width: 75%;
-    }
-
-    .col-10 {
-        width: 83.33%;
-    }
-
-    .col-11 {
-        width: 91.66%;
-    }
-
-    .col-12 {
-        width: 100%;
+    .btn {
+        font-size: 16px;
+        margin-top: 2px;
     }
 }
